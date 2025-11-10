@@ -15,6 +15,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CommunityComponent } from './components/community/community.component';
 import { FacebookPostComponent } from './components/facebook-post/facebook-post.component';
 import { NewsAlertsComponent } from './components/news-alerts/news-alerts.component';
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
+import { TermsOfServiceComponent } from './components/terms-of-service/terms-of-service.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { NewsAlertsComponent } from './components/news-alerts/news-alerts.compon
     FooterComponent,
     CommunityComponent,
     FacebookPostComponent,
-    NewsAlertsComponent
+    NewsAlertsComponent,
+    PrivacyPolicyComponent,
+    TermsOfServiceComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
