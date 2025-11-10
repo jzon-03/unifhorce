@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unifhorce Logo Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        canvas {
+            border: 2px solid #ddd;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        button {
+            background: #0038A8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #002A7A;
+        }
+        .download-section {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Unifhorce Logo Generator</h1>
+        <p>Generate simple logos for your Unifhorce website using HTML5 Canvas.</p>
+        
+        <div>
+            <h3>Main Logo (Dark Background)</h3>
+            <canvas id="logoCanvas" width="200" height="80"></canvas>
+            <button onclick="downloadLogo('logoCanvas', 'unifhorce-logo.png')">Download Logo</button>
+        </div>
+        
+        <div>
+            <h3>White Logo (Light Background)</h3>
+            <canvas id="logoWhiteCanvas" width="200" height="80"></canvas>
+            <button onclick="downloadLogo('logoWhiteCanvas', 'unifhorce-logo-white.png')">Download White Logo</button>
+        </div>
+        
+        <div>
+            <h3>Favicon</h3>
+            <canvas id="faviconCanvas" width="32" height="32"></canvas>
+            <button onclick="downloadLogo('faviconCanvas', 'favicon.png')">Download Favicon</button>
+        </div>
+        
+        <div class="download-section">
+            <h3>Instructions:</h3>
+            <ol>
+                <li>Click the download buttons above to get the logo files</li>
+                <li>Save them to your <code>src/assets/</code> folder</li>
+                <li>Convert favicon.png to favicon.ico using an online converter</li>
+                <li>Update your components to use the real image files instead of placeholders</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function createLogo(canvasId, backgroundColor, textColor, logoColor) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Background
+            ctx.fillStyle = backgroundColor;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Medical cross
+            ctx.fillStyle = logoColor;
+            const centerX = 30;
+            const centerY = canvas.height / 2;
+            const crossSize = 12;
+            
+            // Horizontal bar
+            ctx.fillRect(centerX - crossSize, centerY - 3, crossSize * 2, 6);
+            // Vertical bar
+            ctx.fillRect(centerX - 3, centerY - crossSize, 6, crossSize * 2);
+            
+            // Text
+            ctx.fillStyle = textColor;
+            ctx.font = 'bold 18px Arial';
+            ctx.fillText('Unifhorce', 55, canvas.height / 2 + 6);
+            
+            // Subtitle
+            ctx.font = '8px Arial';
+            ctx.fillStyle = textColor;
+            ctx.fillText('Healthcare Workers', 55, canvas.height / 2 + 18);
+        }
+        
+        function createFavicon(canvasId) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Background
+            ctx.fillStyle = '#0038A8';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Medical cross
+            ctx.fillStyle = '#FCD116';
+            const centerX = 16;
+            const centerY = 16;
+            const crossSize = 8;
+            
+            // Horizontal bar
+            ctx.fillRect(centerX - crossSize, centerY - 2, crossSize * 2, 4);
+            // Vertical bar
+            ctx.fillRect(centerX - 2, centerY - crossSize, 4, crossSize * 2);
+            
+            // Small U
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 10px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('U', centerX, centerY + 3);
+        }
+        
+        function downloadLogo(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+        
+        // Generate logos on page load
+        window.onload = function() {
+            createLogo('logoCanvas', '#0038A8', '#FCD116', '#FCD116');
+            createLogo('logoWhiteCanvas', 'white', '#0038A8', '#CE1126');
+            createFavicon('faviconCanvas');
+        };
+    </script>
+</body>
+</html>
