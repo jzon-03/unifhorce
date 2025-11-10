@@ -23,11 +23,14 @@
 }
 
 .footer-logo {
-  height: 40px;
+  height: 50px;
+  width: auto;
+  object-fit: contain;
   margin-bottom: 1rem;
   background: white;
-  padding: 5px;
-  border-radius: 5px;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .footer-brand h3 {
@@ -171,6 +174,10 @@
 }
 
 @media (max-width: 768px) {
+  .footer-logo {
+    height: 40px;
+  }
+  
   .footer-bottom-content {
     flex-direction: column;
     text-align: center;
