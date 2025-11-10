@@ -1,0 +1,259 @@
+/* Community Section */
+.community {
+  background: #F8F9FA;
+  padding: 80px 0;
+  color: #333333 !important;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #0038A8 !important;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: #6C757D !important;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.community-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  margin-bottom: 4rem;
+}
+
+.community-info h3 {
+  color: #0038A8 !important;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.community-info p {
+  color: #333333 !important;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.community-stats {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #CE1126 !important;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #6C757D !important;
+  line-height: 1.2;
+}
+
+.community-features {
+  margin-bottom: 3rem;
+}
+
+.community-features h4 {
+  color: #0038A8 !important;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.community-features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.community-features li {
+  padding: 0.8rem 0;
+  color: #333333 !important;
+  line-height: 1.5;
+  border-bottom: 1px solid #E9ECEF;
+}
+
+.community-features li:last-child {
+  border-bottom: none;
+}
+
+.btn-facebook {
+  background: #1877F2;
+  color: white !important;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn-facebook:hover {
+  background: #166FE5;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(24, 119, 242, 0.4);
+}
+
+.facebook-embed {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.social-proof {
+  text-align: center;
+}
+
+.social-proof h3 {
+  color: #0038A8 !important;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.social-links-extended {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.social-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.social-link .icon {
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.social-link.facebook .icon {
+  background: #1877F2;
+}
+
+.social-link.twitter .icon {
+  background: #1DA1F2;
+}
+
+.social-link.linkedin .icon {
+  background: #0A66C2;
+}
+
+.social-link.instagram .icon {
+  background: linear-gradient(45deg, #F56040, #C13584, #833AB4);
+}
+
+.social-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.social-info .platform {
+  font-weight: 600;
+  color: #0038A8 !important;
+  font-size: 1.1rem;
+}
+
+.social-info .description {
+  color: #6C757D !important;
+  font-size: 0.9rem;
+}
+
+/* Facebook Page Plugin Responsive */
+.fb-page {
+  width: 100% !important;
+}
+
+.fb-page span {
+  width: 100% !important;
+}
+
+.fb-page iframe {
+  width: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .community-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .facebook-embed {
+    padding: 1rem;
+  }
+  
+  .community-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .social-links-extended {
+    grid-template-columns: 1fr;
+  }
+  
+  .fb-page {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .facebook-embed {
+    padding: 0.5rem;
+  }
+  
+  .community-info h3 {
+    font-size: 1.5rem;
+  }
+}
