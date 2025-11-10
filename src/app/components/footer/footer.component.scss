@@ -173,6 +173,32 @@
   color: #FCD116 !important;
 }
 
+.designer-credit {
+  border-top: 1px solid #495057;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.designer-credit p {
+  color: #ADB5BD !important;
+  font-size: 0.85rem;
+  margin: 0;
+  font-style: italic;
+}
+
+.designer-link {
+  color: #FCD116 !important;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.designer-link:hover {
+  color: #0038A8 !important;
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
   .footer-logo {
     height: 40px;
@@ -186,5 +212,10 @@
   .footer-links {
     flex-wrap: wrap;
     justify-content: center;
+  }
+  
+  .designer-credit p {
+    font-size: 0.8rem;
+    padding: 0 1rem;
   }
 }
