@@ -1,0 +1,19 @@
+<div class="facebook-post-container">
+  <div class="post-header" *ngIf="title || description">
+    <h3 *ngIf="title" class="post-title">{{ title }}</h3>
+    <p *ngIf="description" class="post-description">{{ description }}</p>
+  </div>
+  
+  <div class="facebook-embed-wrapper">
+    <iframe 
+      [src]="safeEmbedUrl"
+      [width]="width"
+      [height]="height"
+      style="border:none;overflow:hidden"
+      scrolling="no"
+      frameborder="0"
+      allowfullscreen="true"
+      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+    </iframe>
+  </div>
+</div>

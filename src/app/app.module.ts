@@ -13,6 +13,8 @@ import { EventsComponent } from './components/events/events.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CommunityComponent } from './components/community/community.component';
+import { FacebookPostComponent } from './components/facebook-post/facebook-post.component';
+import { NewsAlertsComponent } from './components/news-alerts/news-alerts.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { CommunityComponent } from './components/community/community.component';
     EventsComponent,
     ContactComponent,
     FooterComponent,
-    CommunityComponent
+    CommunityComponent,
+    FacebookPostComponent,
+    NewsAlertsComponent
   ],
   imports: [
     BrowserModule,

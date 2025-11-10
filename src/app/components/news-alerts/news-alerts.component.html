@@ -1,0 +1,70 @@
+<!-- News & Alerts Section -->
+<section id="news-alerts" class="news-alerts">
+  <div class="container">
+    <div class="section-header">
+      <h2>🚨 Important Updates & Community Alerts</h2>
+      <p>Stay informed about critical news affecting Filipino healthcare workers and their families</p>
+    </div>
+    
+    <div class="alerts-grid">
+      <!-- Typhoon Weather Alert -->
+      <div class="alert-item urgent">
+        <div class="alert-header">
+          <span class="alert-type">🌪️ Weather Alert</span>
+          <span class="alert-urgency urgent">URGENT</span>
+        </div>
+        <app-facebook-post 
+          postUrl="https://www.facebook.com/USEmbassyPH/posts/pfbid0YqKBgSasWjucH8c1yYvY3CkWPmZBbukEvruV19cNUYcuezEiCxCSG5ciVT5Znf6zl"
+          title="⚠️ Severe Typhoon Alert - Philippines"
+          description="Important weather alert from the US Embassy Philippines regarding the strong typhoon. Please share with family and friends in the Philippines."
+          [width]="500"
+          [height]="545"
+          [showText]="true">
+        </app-facebook-post>
+      </div>
+      
+      <!-- Community Support -->
+      <div class="alert-item info">
+        <div class="alert-header">
+          <span class="alert-type">💙 Community Support</span>
+          <span class="alert-urgency info">COMMUNITY</span>
+        </div>
+        <div class="alert-content">
+          <h3>Support Our Filipino Healthcare Heroes</h3>
+          <p>If you have family or friends affected by severe weather in the Philippines, our community is here to support you. Connect with fellow Filipino healthcare workers through our Facebook community for mutual support, resources, and assistance during difficult times.</p>
+          <div class="support-actions">
+            <a href="https://www.facebook.com/profile.php?id=61581874225388" target="_blank" class="btn btn-primary">Join Community</a>
+            <a href="#community" class="btn btn-secondary">Community Support</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- How to Add More Posts -->
+      <div class="alert-item tutorial">
+        <div class="alert-header">
+          <span class="alert-type">📚 For Admins</span>
+          <span class="alert-urgency tutorial">TUTORIAL</span>
+        </div>
+        <div class="alert-content">
+          <h3>How to Add New Facebook Posts</h3>
+          <p>To add new Facebook posts to this section:</p>
+          <ol>
+            <li>Copy the Facebook post URL</li>
+            <li>Add a new alert-item div in the news-alerts component</li>
+            <li>Use the app-facebook-post component with the post URL</li>
+            <li>Set appropriate title, description, and urgency level</li>
+          </ol>
+          <div class="code-example">
+            <code>
+              &lt;app-facebook-post <br>
+              &nbsp;&nbsp;postUrl="YOUR_FACEBOOK_POST_URL"<br>
+              &nbsp;&nbsp;title="Your Title"<br>
+              &nbsp;&nbsp;description="Your description"&gt;<br>
+              &lt;/app-facebook-post&gt;
+            </code>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
