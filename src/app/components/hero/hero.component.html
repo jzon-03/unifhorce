@@ -1,30 +1,42 @@
 <!-- Hero Section -->
-<section id="home" class="hero">
+<section id="home" class="hero" role="banner" aria-label="Hero section with organization introduction">
   <div class="hero-content">
     <div class="hero-text">
-      <h1>Empowering Filipino Healthcare Workers in America</h1>
-      <p class="hero-subtitle">Supporting your journey from the Philippines to professional success in the United States healthcare system</p>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-number">15</span>
-          <span class="stat-label">Healthcare Workers Supported</span>
+      <h1 id="main-heading">Empowering Filipino Healthcare Workers in America</h1>
+      <p class="hero-subtitle" aria-describedby="main-heading">Supporting your journey from the Philippines to professional success in the United States healthcare system</p>
+      <div class="hero-stats" role="region" aria-label="Organization statistics">
+        <div class="stat" role="group" aria-labelledby="stat1-number stat1-label">
+          <span class="stat-number" id="stat1-number" aria-label="15">15</span>
+          <span class="stat-label" id="stat1-label">Healthcare Workers Supported</span>
         </div>
-        <div class="stat">
-          <span class="stat-number">8</span>
-          <span class="stat-label">Successful License Transfers</span>
+        <div class="stat" role="group" aria-labelledby="stat2-number stat2-label">
+          <span class="stat-number" id="stat2-number" aria-label="8">8</span>
+          <span class="stat-label" id="stat2-label">Successful License Transfers</span>
         </div>
-        <div class="stat">
-          <span class="stat-number">3</span>
-          <span class="stat-label">Partner Hospitals</span>
+        <div class="stat" role="group" aria-labelledby="stat3-number stat3-label">
+          <span class="stat-number" id="stat3-number" aria-label="3">3</span>
+          <span class="stat-label" id="stat3-label">Partner Hospitals</span>
         </div>
       </div>
-      <div class="hero-buttons">
-        <a href="#services" class="btn btn-primary">Get Support</a>
-        <a href="#about" class="btn btn-secondary">Learn More</a>
+      <div class="hero-buttons" role="group" aria-label="Call to action buttons">
+        <a href="#services" 
+           class="btn btn-primary" 
+           role="button"
+           aria-describedby="get-support-desc">Get Support</a>
+        <a href="#about" 
+           class="btn btn-secondary" 
+           role="button"
+           aria-describedby="learn-more-desc">Learn More</a>
+      </div>
+      
+      <!-- Hidden descriptions for screen readers -->
+      <div class="sr-only">
+        <div id="get-support-desc">Navigate to our services section to learn about available support</div>
+        <div id="learn-more-desc">Navigate to about section to learn more about our organization</div>
       </div>
     </div>
-    <div class="hero-image">
-      <div class="placeholder-image" style="width: 100%; height: 400px;">
+    <div class="hero-image" role="img" aria-label="Illustration representing Filipino healthcare workers achieving professional excellence in American healthcare">
+      <div class="placeholder-image" style="width: 100%; height: 400px;" aria-hidden="true">
         <div>
           <div>🏥 Filipino Healthcare Workers</div>
           <div style="font-size: 0.8rem; margin-top: 10px;">Professional Excellence in American Healthcare</div>

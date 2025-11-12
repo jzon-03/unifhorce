@@ -1,31 +1,53 @@
 <!-- Header -->
-<header class="header">
-  <nav class="navbar">
+<header class="header" role="banner">
+  <nav class="navbar" role="navigation" aria-label="Main navigation" id="navigation">
     <div class="nav-container">
       <div class="nav-brand">
-        <a routerLink="/" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem;">
-          <img src="assets/images/unifhorce_logo.jpg" alt="Unifhorce Logo" class="logo">
+        <a routerLink="/" 
+           style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem;"
+           aria-label="Unifhorce home page - United Filipino Healthcare Workers">
+          <img src="assets/images/unifhorce_logo.jpg" 
+               alt="Unifhorce Logo - Filipino flag colors with healthcare symbols" 
+               class="logo">
           <div>
             <span class="brand-name">Unifhorce</span>
             <span class="tagline">United Filipino Healthcare Workers</span>
           </div>
         </a>
       </div>
-      <ul class="nav-menu">
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#services" class="nav-link">Services</a></li>
-        <li><a href="#news-alerts" class="nav-link">Alerts</a></li>
-        <li><a href="#resources" class="nav-link">Resources</a></li>
-        <li><a href="#events" class="nav-link">Events</a></li>
-        <!-- <li><a href="#contact" class="nav-link">Contact</a></li> -->
-        <!-- <li><a href="#donate" class="nav-link donate-btn">Donate</a></li> -->
+      <ul class="nav-menu" role="menubar" aria-label="Main navigation menu">
+        <li role="none"><a href="#home" class="nav-link" role="menuitem" aria-describedby="home-desc">Home</a></li>
+        <li role="none"><a href="#about" class="nav-link" role="menuitem" aria-describedby="about-desc">About</a></li>
+        <li role="none"><a href="#services" class="nav-link" role="menuitem" aria-describedby="services-desc">Services</a></li>
+        <li role="none"><a href="#news-alerts" class="nav-link" role="menuitem" aria-describedby="alerts-desc">Alerts</a></li>
+        <li role="none"><a href="#resources" class="nav-link" role="menuitem" aria-describedby="resources-desc">Resources</a></li>
+        <li role="none"><a href="#events" class="nav-link" role="menuitem" aria-describedby="events-desc">Events</a></li>
+        <!-- <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li> -->
+        <!-- <li role="none"><a href="#donate" class="nav-link donate-btn" role="menuitem">Donate</a></li> -->
       </ul>
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <button class="hamburger" 
+              id="hamburger-button"
+              type="button"
+              aria-label="Toggle navigation menu"
+              aria-expanded="false"
+              aria-controls="nav-menu"
+              (click)="toggleMobileMenu()"
+              (keydown.enter)="toggleMobileMenu()"
+              (keydown.space)="toggleMobileMenu()">
+        <span class="hamburger-line" aria-hidden="true"></span>
+        <span class="hamburger-line" aria-hidden="true"></span>
+        <span class="hamburger-line" aria-hidden="true"></span>
+      </button>
+    </div>
+    
+    <!-- Hidden descriptions for screen readers -->
+    <div class="sr-only">
+      <div id="home-desc">Navigate to homepage section</div>
+      <div id="about-desc">Learn about our organization and mission</div>
+      <div id="services-desc">View our support services for healthcare workers</div>
+      <div id="alerts-desc">Important news and community alerts</div>
+      <div id="resources-desc">Helpful resources and links</div>
+      <div id="events-desc">Upcoming community events and meetings</div>
     </div>
   </nav>
 </header>

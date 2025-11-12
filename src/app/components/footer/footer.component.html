@@ -1,25 +1,47 @@
 <!-- Footer -->
-<footer class="footer">
+<footer class="footer" role="contentinfo" aria-label="Site footer with organization information and links">
   <div class="container">
     <div class="footer-content">
       <div class="footer-section">
         <div class="footer-brand">
-          <img src="assets/images/unifhorce_logo.jpg" alt="Unifhorce Logo" class="footer-logo">
+          <img src="assets/images/unifhorce_logo.jpg" 
+               alt="Unifhorce Logo - Filipino flag colors with healthcare symbols" 
+               class="footer-logo">
           <h3>Unifhorce</h3>
           <p>Founded in 2024 in Rochester, NY. Empowering Filipino healthcare workers to achieve their American dreams while maintaining their cultural identity and values.</p>
         </div>
-        <div class="social-links">
-          <a href="https://www.facebook.com/profile.php?id=61581874225388" target="_blank" class="social-icon facebook">
-            <i class="fab fa-facebook-f"></i>
+        <div class="social-links" role="group" aria-label="Social media links">
+          <a href="https://www.facebook.com/profile.php?id=61581874225388" 
+             target="_blank" 
+             class="social-icon facebook"
+             aria-label="Follow us on Facebook"
+             rel="noopener noreferrer">
+            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+            <span class="sr-only">Facebook</span>
           </a>
-          <a href="https://x.com" target="_blank" class="social-icon twitter">
-            <i class="fab fa-x-twitter"></i>
+          <a href="https://x.com" 
+             target="_blank" 
+             class="social-icon twitter"
+             aria-label="Follow us on X (formerly Twitter)"
+             rel="noopener noreferrer">
+            <i class="fab fa-x-twitter" aria-hidden="true"></i>
+            <span class="sr-only">X (Twitter)</span>
           </a>
-          <a href="https://www.linkedin.com" target="_blank" class="social-icon linkedin">
-            <i class="fab fa-linkedin-in"></i>
+          <a href="https://www.linkedin.com" 
+             target="_blank" 
+             class="social-icon linkedin"
+             aria-label="Connect with us on LinkedIn"
+             rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+            <span class="sr-only">LinkedIn</span>
           </a>
-          <a href="https://www.instagram.com" target="_blank" class="social-icon instagram">
-            <i class="fab fa-instagram"></i>
+          <a href="https://www.instagram.com" 
+             target="_blank" 
+             class="social-icon instagram"
+             aria-label="Follow us on Instagram"
+             rel="noopener noreferrer">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+            <span class="sr-only">Instagram</span>
           </a>
         </div>
       </div>
@@ -61,16 +83,25 @@
       
       <div class="footer-section">
         <h4>Contact Info</h4>
-        <div class="contact-info">
-          <p>📞 (585) 555-8643</p>
-          <p>✉️ info&#64;unifhorce.org</p>
-          <p>📍 Rochester, NY</p>
+        <div class="contact-info" role="group" aria-label="Contact information">
+          <p><span aria-hidden="true">📞</span> <a href="tel:+15855558643" aria-label="Call us at 5 8 5, 5 5 5, 8 6 4 3">(585) 555-8643</a></p>
+          <p><span aria-hidden="true">✉️</span> <a href="mailto:info@unifhorce.org" aria-label="Email us at info at unifhorce dot org">info&#64;unifhorce.org</a></p>
+          <p><span aria-hidden="true">📍</span> <span aria-label="Location: Rochester, New York">Rochester, NY</span></p>
         </div>
         <div class="newsletter">
-          <h5>Newsletter</h5>
-          <form class="newsletter-form">
-            <input type="email" placeholder="Your email">
-            <button type="submit">Subscribe</button>
+          <h5 id="newsletter-heading">Newsletter</h5>
+          <form class="newsletter-form" role="form" aria-labelledby="newsletter-heading">
+            <label for="email-input" class="sr-only">Enter your email address for newsletter subscription</label>
+            <input type="email" 
+                   id="email-input"
+                   placeholder="Your email"
+                   aria-describedby="newsletter-desc"
+                   required>
+            <button type="submit" 
+                    aria-describedby="newsletter-desc">Subscribe</button>
+            <div id="newsletter-desc" class="sr-only">
+              Subscribe to receive updates about Filipino healthcare worker resources and community news
+            </div>
           </form>
         </div>
       </div>
@@ -79,15 +110,31 @@
     <div class="footer-bottom">
       <div class="footer-bottom-content">
         <p>&copy; 2024 Unifhorce - United Filipino Healthcare Workers. All rights reserved.</p>
-        <div class="footer-links">
-          <a routerLink="/privacy-policy">Privacy Policy</a>
-          <a routerLink="/terms-of-service">Terms of Service</a>
-          <a href="https://www.ada.gov/resources/web-guidance/" target="_blank">Accessibility</a>
-          <a href="https://www.xml-sitemaps.com" target="_blank">Sitemap</a>
+        <nav class="footer-links" role="navigation" aria-label="Footer legal and policy links">
+          <a routerLink="/privacy-policy" aria-describedby="privacy-desc">Privacy Policy</a>
+          <a routerLink="/terms-of-service" aria-describedby="terms-desc">Terms of Service</a>
+          <a href="https://www.ada.gov/resources/web-guidance/" 
+             target="_blank" 
+             aria-describedby="accessibility-desc"
+             rel="noopener noreferrer">Accessibility</a>
+          <a href="https://www.xml-sitemaps.com" 
+             target="_blank" 
+             aria-describedby="sitemap-desc"
+             rel="noopener noreferrer">Sitemap</a>
+        </nav>
+        
+        <!-- Hidden descriptions for screen readers -->
+        <div class="sr-only">
+          <div id="privacy-desc">View our privacy policy and data handling practices</div>
+          <div id="terms-desc">View our terms of service and usage guidelines</div>
+          <div id="accessibility-desc">Learn about our accessibility commitment and ADA compliance</div>
+          <div id="sitemap-desc">View site structure and all available pages</div>
         </div>
       </div>
       <div class="designer-credit">
-        <p>Website designed by <a href="mailto:jzon_03@yahoo.com" class="designer-link">Jayson Guevarra</a> - Need a professional website? Get in touch!</p>
+        <p>Website designed by <a href="mailto:jzon_03@yahoo.com" 
+                                 class="designer-link"
+                                 aria-label="Contact website designer Jayson Guevarra via email">Jayson Guevarra</a> - Need a professional website? Get in touch!</p>
       </div>
     </div>
   </div>

@@ -1,43 +1,64 @@
 <!-- News & Alerts Section -->
-<section id="news-alerts" class="news-alerts">
+<section id="news-alerts" class="news-alerts" role="region" aria-labelledby="alerts-heading">
   <div class="container">
     <div class="section-header">
-      <h2>🚨 Important Updates & Community Alerts</h2>
+      <h2 id="alerts-heading">
+        <span aria-hidden="true">🚨</span> 
+        Important Updates & Community Alerts
+      </h2>
       <p>Stay informed about critical news affecting Filipino healthcare workers and their families</p>
     </div>
     
-    <div class="alerts-grid">
+    <div class="alerts-grid" role="group" aria-label="Community alerts and news">
       <!-- Typhoon Weather Alert -->
-      <div class="alert-item urgent">
+      <article class="alert-item urgent" role="alert" aria-labelledby="weather-alert-title">
         <div class="alert-header">
-          <span class="alert-type">🌪️ Weather Alert</span>
-          <span class="alert-urgency urgent">URGENT</span>
+          <span class="alert-type" id="weather-alert-title">
+            <span aria-hidden="true">🌪️</span> Weather Alert
+          </span>
+          <span class="alert-urgency urgent" aria-label="Urgent priority alert">URGENT</span>
         </div>
-        <app-facebook-post 
-          postUrl="https://www.facebook.com/USEmbassyPH/posts/pfbid0YqKBgSasWjucH8c1yYvY3CkWPmZBbukEvruV19cNUYcuezEiCxCSG5ciVT5Znf6zl"
-          title="⚠️ Severe Typhoon Alert - Philippines"
-          description="Important weather alert from the US Embassy Philippines regarding the strong typhoon. Please share with family and friends in the Philippines."
-          [width]="500"
-          [height]="545"
-          [showText]="true">
-        </app-facebook-post>
-      </div>
+        <div role="complementary" aria-label="Embedded social media post about typhoon alert">
+          <app-facebook-post 
+            postUrl="https://www.facebook.com/USEmbassyPH/posts/pfbid0YqKBgSasWjucH8c1yYvY3CkWPmZBbukEvruV19cNUYcuezEiCxCSG5ciVT5Znf6zl"
+            title="⚠️ Severe Typhoon Alert - Philippines"
+            description="Important weather alert from the US Embassy Philippines regarding the strong typhoon. Please share with family and friends in the Philippines."
+            [width]="500"
+            [height]="545"
+            [showText]="true">
+          </app-facebook-post>
+        </div>
+      </article>
       
       <!-- Community Support -->
-      <div class="alert-item info">
+      <article class="alert-item info" role="complementary" aria-labelledby="community-support-title">
         <div class="alert-header">
-          <span class="alert-type">💙 Community Support</span>
-          <span class="alert-urgency info">COMMUNITY</span>
+          <span class="alert-type" id="community-support-title">
+            <span aria-hidden="true">💙</span> Community Support
+          </span>
+          <span class="alert-urgency info" aria-label="Community information">COMMUNITY</span>
         </div>
         <div class="alert-content">
           <h3>Support Our Filipino Healthcare Heroes</h3>
           <p>If you have family or friends affected by severe weather in the Philippines, our community is here to support you. Connect with fellow Filipino healthcare workers through our Facebook community for mutual support, resources, and assistance during difficult times.</p>
-          <div class="support-actions">
-            <a href="https://www.facebook.com/profile.php?id=61581874225388" target="_blank" class="btn btn-primary">Join Community</a>
-            <a href="#community" class="btn btn-secondary">Community Support</a>
+          <div class="support-actions" role="group" aria-label="Community support actions">
+            <a href="https://www.facebook.com/profile.php?id=61581874225388" 
+               target="_blank" 
+               class="btn btn-primary"
+               aria-describedby="join-community-desc"
+               rel="noopener noreferrer">Join Community</a>
+            <a href="#community" 
+               class="btn btn-secondary"
+               aria-describedby="community-support-desc">Community Support</a>
+          </div>
+          
+          <!-- Hidden descriptions for screen readers -->
+          <div class="sr-only">
+            <div id="join-community-desc">Opens Facebook page in new window to join our community</div>
+            <div id="community-support-desc">Navigate to community support section</div>
           </div>
         </div>
-      </div>
+      </article>
     </div>
   </div>
 </section>
