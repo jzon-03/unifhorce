@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { AccessibilityService } from '../../services/accessibility.service';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrl: './header.component.scss',
+    standalone: false
 })
 export class HeaderComponent {
   isMobileMenuOpen = false;

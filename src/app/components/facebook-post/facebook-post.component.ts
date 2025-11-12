@@ -8,9 +8,10 @@ declare global {
 }
 
 @Component({
-  selector: 'app-facebook-post',
-  templateUrl: './facebook-post.component.html',
-  styleUrl: './facebook-post.component.scss'
+    selector: 'app-facebook-post',
+    templateUrl: './facebook-post.component.html',
+    styleUrl: './facebook-post.component.scss',
+    standalone: false
 })
 export class FacebookPostComponent implements AfterViewInit {
   @Input() postUrl: string = '';
