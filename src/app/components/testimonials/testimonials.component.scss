@@ -125,3 +125,93 @@
     padding: 1.5rem;
   }
 }
+
+/* Loading, Error, and Empty States */
+.loading-state,
+.error-state,
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #666;
+}
+
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e3e3e3;
+  border-top: 4px solid #0066cc;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-state {
+  background: #fff5f5;
+  border: 1px solid #fed7d7;
+  border-radius: 8px;
+  margin: 2rem 0;
+  
+  p {
+    color: #c53030;
+    margin-bottom: 1rem;
+  }
+}
+
+.retry-btn {
+  background: #0066cc;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+  }
+
+  &:focus {
+    outline: 2px solid #ffbf00;
+    outline-offset: 2px;
+  }
+}
+
+.empty-state {
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  margin: 2rem 0;
+  
+  p {
+    color: #4a5568;
+    font-style: italic;
+  }
+}
+
+/* Enhanced testimonial card structure */
+.author-title {
+  display: block;
+  font-weight: 600;
+  color: #0066cc;
+  margin-top: 0.25rem;
+}
+
+.author-location {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.25rem;
+}

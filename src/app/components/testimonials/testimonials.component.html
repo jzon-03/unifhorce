@@ -1,52 +1,52 @@
 <!-- Success Stories / Testimonials -->
-<section id="testimonials" class="testimonials">
+<section id="testimonials" class="testimonials" role="region" aria-labelledby="testimonials-heading">
   <div class="container">
     <div class="section-header">
-      <h2>Success Stories</h2>
-      <p>Hear from Filipino healthcare workers who achieved their American dreams</p>
+      <h2 id="testimonials-heading">Success Stories</h2>
+      <p class="section-subtitle">Hear from Filipino healthcare workers who achieved their American dreams</p>
     </div>
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
+
+    <!-- Loading State -->
+    <div *ngIf="loading" class="loading-state" role="status" aria-label="Loading testimonials">
+      <div class="loading-spinner" aria-hidden="true"></div>
+      <p>Loading success stories...</p>
+    </div>
+
+    <!-- Error State -->
+    <div *ngIf="error && !loading" class="error-state" role="alert">
+      <p>{{ error }}</p>
+      <button (click)="loadTestimonials()" class="retry-btn">Try Again</button>
+    </div>
+
+    <!-- Testimonials Grid -->
+    <div *ngIf="!loading && !error" class="testimonials-grid" role="group" aria-label="Success stories from Filipino healthcare workers">
+      <article 
+        *ngFor="let testimonial of testimonials; trackBy: trackByTestimonial" 
+        class="testimonial-card"
+        role="article"
+        [attr.aria-labelledby]="'testimonial-' + testimonial.initials"
+      >
         <div class="testimonial-content">
-          <p>"Unifhorce helped me navigate the complex NCLEX process and connected me with my dream job at a prestigious hospital in California. Their support made all the difference in my journey."</p>
+          <p>
+            <span aria-hidden="true">"</span>{{ testimonial.quote }}<span aria-hidden="true">"</span>
+          </p>
         </div>
         <div class="testimonial-author">
-          <div class="placeholder-testimonial">MS</div>
+          <div class="placeholder-testimonial" [attr.aria-label]="testimonial.name + ' initials'">
+            {{ testimonial.initials }}
+          </div>
           <div class="author-info">
-            <h4>Maria Santos, RN</h4>
-            <span>ICU Nurse, Cedars-Sinai Medical Center</span>
-            <span>From Manila to Los Angeles</span>
+            <h4 [id]="'testimonial-' + testimonial.initials">{{ testimonial.name }}</h4>
+            <span class="author-title">{{ testimonial.title }}, {{ testimonial.hospital }}</span>
+            <span class="author-location">From {{ testimonial.locationFrom }} to {{ testimonial.locationTo }}</span>
           </div>
         </div>
-      </div>
-      
-      <div class="testimonial-card">
-        <div class="testimonial-content">
-          <p>"The mentorship program connected me with a senior Filipino nurse who guided me through my first year in the US. Now I'm a charge nurse and mentoring others through Unifhorce."</p>
-        </div>
-        <div class="testimonial-author">
-          <div class="placeholder-testimonial">JR</div>
-          <div class="author-info">
-            <h4>Jose Reyes, RN</h4>
-            <span>Charge Nurse, Houston Methodist</span>
-            <span>From Cebu to Houston</span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="testimonial-card">
-        <div class="testimonial-content">
-          <p>"Beyond professional support, Unifhorce helped my entire family integrate into American life. My children are thriving in school, and we've found our community here."</p>
-        </div>
-        <div class="testimonial-author">
-          <div class="placeholder-testimonial">AC</div>
-          <div class="author-info">
-            <h4>Anna Cruz, LPN</h4>
-            <span>Pediatric Nurse, Children's Hospital</span>
-            <span>From Davao to New York</span>
-          </div>
-        </div>
-      </div>
+      </article>
+    </div>
+
+    <!-- Empty State -->
+    <div *ngIf="!loading && !error && testimonials.length === 0" class="empty-state">
+      <p>No testimonials available at the moment. Check back soon for inspiring success stories!</p>
     </div>
   </div>
 </section>
