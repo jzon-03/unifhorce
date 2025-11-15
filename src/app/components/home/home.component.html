@@ -1,9 +1,33 @@
 <app-hero></app-hero>
 <app-about></app-about>
+
+<!-- AdSense: After About Section -->
+<app-adsense 
+  [adSlot]="adsenseConfig.adSlots.homeAfterAbout"
+  [adFormat]="adsenseConfig.formats.auto"
+  [fullWidthResponsive]="true">
+</app-adsense>
+
 <app-services></app-services>
 <app-testimonials></app-testimonials>
+
+<!-- AdSense: After Testimonials Section -->
+<app-adsense 
+  [adSlot]="adsenseConfig.adSlots.homeAfterTestimonials"
+  [adFormat]="adsenseConfig.formats.auto"
+  [fullWidthResponsive]="true">
+</app-adsense>
+
 <app-community></app-community>
 <app-news-alerts></app-news-alerts>
 <app-resources></app-resources>
+
+<!-- AdSense: After Resources Section -->
+<app-adsense 
+  [adSlot]="adsenseConfig.adSlots.homeAfterResources"
+  [adFormat]="adsenseConfig.formats.auto"
+  [fullWidthResponsive]="true">
+</app-adsense>
+
 <app-events></app-events>
 <!-- <app-contact></app-contact> -->

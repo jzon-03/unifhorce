@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ADSENSE_CONFIG } from '../../config/adsense.config';
 
 @Component({
     selector: 'app-home',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
     standalone: false
 })
 export class HomeComponent {
-
+  adsenseConfig = ADSENSE_CONFIG;
 }

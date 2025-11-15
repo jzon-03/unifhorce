@@ -1,0 +1,41 @@
+/* AdSense Container Styling */
+.adsense-container {
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 100%;
+  text-align: center;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e1e4e8;
+}
+
+.ad-label {
+  font-size: 0.75rem;
+  color: #6c757d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.adsbygoogle {
+  display: block;
+  min-height: 50px;
+  background: #ffffff;
+  border-radius: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .adsense-container {
+    margin: 1.5rem auto;
+    padding: 0.75rem;
+  }
+}
+
+/* Accessibility - Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .adsense-container {
+    transition: none;
+  }
+}

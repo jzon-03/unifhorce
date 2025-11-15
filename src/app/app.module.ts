@@ -20,6 +20,7 @@ import { NewsAlertsComponent } from './components/news-alerts/news-alerts.compon
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 import { TermsOfServiceComponent } from './components/terms-of-service/terms-of-service.component';
 import { HomeComponent } from './components/home/home.component';
+import { AdsenseComponent } from './components/adsense/adsense.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { HomeComponent } from './components/home/home.component';
     NewsAlertsComponent,
     PrivacyPolicyComponent,
     TermsOfServiceComponent,
-    HomeComponent
+    HomeComponent,
+    AdsenseComponent
   ],
   imports: [
     BrowserModule,
