@@ -53,7 +53,8 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/404.html"
+              "src/404.html",
+              "src/CNAME"
             ],
             "styles": [
               "src/styles.scss"
